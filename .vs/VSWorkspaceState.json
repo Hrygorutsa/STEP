@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Web-api-master",
+    "\\Web-api-master\\backend",
+    "\\Web-api-master\\backend\\Compass.Api",
+    "\\Web-api-master\\backend\\Compass.Api\\Controllers",
+    "\\Web-api-master\\backend\\Compass.Core",
+    "\\Web-api-master\\backend\\Compass.Core\\Services"
   ],
-  "SelectedNode": "\\C:\\Users\\ivanh\\Source\\Repos\\STEP",
+  "SelectedNode": "\\Web-api-master\\backend\\Compass.Api\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

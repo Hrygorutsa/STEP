@@ -11,13 +11,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { CoursesComponent } from './courses/courses.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CategoriesComponent } from './categories/categories.component';
+//import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CategoriesComponent
+    //CategoriesComponent
   ],
   imports: [
     BrowserModule, MatSlideToggleModule, MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule,NgIf, MatGridListModule, MatCardModule, HttpClientModule
