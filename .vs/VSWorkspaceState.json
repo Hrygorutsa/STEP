@@ -2,11 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Web-api-master",
-    "\\Web-api-master\\backend",
-    "\\Web-api-master\\backend\\Compass.Api",
-    "\\Web-api-master\\backend\\Compass.Api\\Controllers",
-    "\\Web-api-master\\backend\\Compass.Core",
-    "\\Web-api-master\\backend\\Compass.Core\\Services"
+    "\\Web-api-master\\dashboard",
+    "\\Web-api-master\\dashboard\\src",
+    "\\Web-api-master\\dashboard\\src\\store",
+    "\\Web-api-master\\dashboard\\src\\store\\action-creators",
+    "\\Web-api-master\\dashboard\\src\\store\\action-creators\\categoryActions",
+    "\\Web-api-master\\frontend",
+    "\\Web-api-master\\frontend\\src",
+    "\\Web-api-master\\frontend\\src\\app"
   ],
   "SelectedNode": "\\Web-api-master\\backend\\Compass.Api\\appsettings.json",
   "PreviewInSolutionExplorer": false
