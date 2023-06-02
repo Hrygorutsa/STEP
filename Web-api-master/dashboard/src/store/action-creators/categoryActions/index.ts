@@ -12,17 +12,16 @@ export const GetAllCategories = () => {
     try {
       dispatch({ type: CategoryActionType.START_REQUEST });
       const data = await GetAllAsync();
-        const { response } = data;
-        console.log("GetAllCourses ", response);
-        if (response.success) {
+      const { response } = data;
+      console.log("GetAllCourses ", response);
+      if (response.success) {
         dispatch({
           type: CategoryActionType.ALL_CATEGORIES_LOADED,
-         // payload: response,
-            payload: response.payload,
+          payload: response.payload,
         });
-        } else {
-            toast.error(response.message);
-        }
+      } else {
+        toast.error(response.message);
+      }
     } catch {}
   };
 };

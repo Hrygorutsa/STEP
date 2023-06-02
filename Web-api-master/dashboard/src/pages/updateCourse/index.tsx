@@ -25,20 +25,19 @@ const UpdateCourse: React.FC = () => {
   const {DeleteCourse, UpdateCourse} = useActions();
   const { GetAllCategories } = useActions();
 
-  //const { allCategories } = useTypedSelector((state) => state.CategoryReducer);
-    const { allCategories } = useTypedSelector((state: { CategoryReducer: CategoryState; }) => state.CategoryReducer);
+  const { allCategories } = useTypedSelector((state: { CategoryReducer: CategoryState; }) => state.CategoryReducer);
 
   const navigate = useNavigate();
   const selectedCourse = getSelectedCourse();
 
-  //const categoryId = 1;
   const updateCourse = JSON.parse(selectedCourse);
-
+  
   if(selectedCourse == null)
   {
     navigate("/dashboard/courses");
   }
-    const categoryId = updateCourse.categoryId.toString();
+  const categoryId = updateCourse.categoryId.toString();
+
   useEffect(() => {
     GetAllCategories();
   }, []);
