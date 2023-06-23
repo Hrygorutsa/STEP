@@ -1,6 +1,4 @@
 # STEP
-Sure! Here's an improved version of the documentation formatted as a Markdown file:
-
 # Web API Backend Documentation
 
 This documentation provides an overview of the files and directories in the Web API backend project.
