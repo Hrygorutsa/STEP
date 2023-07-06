@@ -1,0 +1,12 @@
+Develop a program called "Library". Create a structure called "Book" (title, author, publisher, genre). Create an array of 10 books. Implement the following functionalities for it:
+
+Add a book; // Add a book to the file
+Remove a book (by name or author); // Find the book, delete it from the array, and update the file
+Fill in book information;
+Edit a book (by name or author);
+Print all books; // Read books from the file and print them
+Search for books by author; // Print information about the book
+Search for a book by title;
+Sort the array by book title;
+Sort the array by author;
+Sort the array by publisher.

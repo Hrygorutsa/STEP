@@ -1,0 +1,24 @@
+1. (1) Create a function with 3 arguments that takes the radius of a circle and calculates the circumference and area of the circle using reference parameters.
+
+2. (1) Create a function (or template) that takes a one-dimensional array as an argument and returns the maximum and minimum values of the array using reference parameters.
+
+3. (1) Write functions for working with a dynamic integer one-dimensional array:
+
+Function to create a dynamic array of a specified size and initialize its elements to zero.
+Function to fill the array with random numbers within a user-specified range.
+Function to print the array.
+Function to append an element to the array.
+Function to delete an element at a given position (index).
+Function to insert a new element at a specified index.
+4. (1) Use the previously developed function library (Task 6) to perform the following operations on a dynamic array of size 20, filled with random numbers in the range [-12..56]:
+
+Insert the absolute value of each negative element after the element itself.
+Remove all even elements from the array.
+5. (4) Given two dynamic arrays A[n] and B[m], create a third array of the minimum possible size that contains:
+
+Elements from both arrays.
+Common elements of both arrays.
+Elements from array A that do not appear in array B.
+Elements from array B that do not appear in array A.
+Elements from arrays A and B that are not common (i.e., the union of the previous two results).
+6. (4) Create a function that allows adding a block of elements to the end of an array.

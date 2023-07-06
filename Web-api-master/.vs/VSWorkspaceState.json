@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\backend"
+    "\\backend",
+    "\\dashboard",
+    "\\frontend"
   ],
+  "SelectedNode": "\\backend\\Compass.sln",
   "PreviewInSolutionExplorer": false
 }
