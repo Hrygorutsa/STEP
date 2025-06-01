@@ -1,332 +1,210 @@
-# STEP
-My Project From my Step Academy
-# Web API Backend Documentation
+---
 
-This documentation provides an overview of the files and directories in the Web API backend project.
+# 🎯 Step Academy Project — Full Stack Application
 
-## File List
+1. **Backend Web API (ASP.NET Core)**
+2. **Dashboard (React + TypeScript)**
+3. **Frontend Client (Angular)**
 
-- **.gitignore**: Specifies which files and directories should be ignored by Git version control.
+---
 
-### Compass.Api
+## 📘 Web API (Backend)
 
-- **appsettings.Development.json**: Configuration file for the development environment.
-- **appsettings.json**: Configuration file for the application.
-- **Compass.Api.csproj**: Project file for the Compass API.
-- **Compass.Api.csproj.user**: User-specific project file for the Compass API.
-- **Program.cs**: Entry point of the Compass API application.
+A modular ASP.NET Core backend providing APIs for course and user management.
 
-### Controllers
+### 🗂️ Key Files
 
-- **CategoryController.cs**: Controller for handling category-related requests.
-- **CourseController.cs**: Controller for handling course-related requests.
-- **UserController.cs**: Controller for handling user-related requests.
+| File         | Description                                 |
+| ------------ | ------------------------------------------- |
+| `.gitignore` | Specifies ignored files/directories for Git |
 
-### Properties
+### 📁 Compass.Api
 
-- **launchSettings.json**: Configuration file for launching the Compass API.
+| File                           | Description                 |
+| ------------------------------ | --------------------------- |
+| `appsettings.json`             | Base configuration          |
+| `appsettings.Development.json` | Development-specific config |
+| `Compass.Api.csproj`           | Project file                |
+| `Program.cs`                   | App entry point             |
 
-### Compass.Core
+#### 📂 Controllers
 
-- **Compass.Core.csproj**: Project file for the Compass Core library.
-- **ServiceExtensions.cs**: Extension methods for configuring services in the application.
+* `CategoryController.cs`
+* `CourseController.cs`
+* `UserController.cs`
 
-### AutoMapper
+#### ⚙️ Properties
 
-- **AutoMapperCategoryAndProductProfile.cs**: AutoMapper profile for mapping between category and product entities.
-- **AutoMapperCourseProfile.cs**: AutoMapper profile for mapping between course and DTO entities.
-- **AutoMapperUserProfile.cs**: AutoMapper profile for mapping between user and DTO entities.
+* `launchSettings.json`: Development launch profiles
 
-### DTO's
+### 📁 Compass.Core
 
-- **AllUsersDto.cs**: Data transfer object for representing all users.
-- **CategoryDto.cs**: Data transfer object for representing a category.
-- **ConfirmEmailDto.cs**: Data transfer object for confirming email.
-- **CourseDto.cs**: Data transfer object for representing a course.
-- **LoginUserDto.cs**: Data transfer object for representing a login user.
-- **ResetPasswordDto.cs**: Data transfer object for resetting password.
-- **RegisterUserDto.cs**: Data transfer object for registering a user.
-- **TokenRequestDto.cs**: Data transfer object for requesting a token.
-- **UpdateProfileDto.cs**: Data transfer object for updating a user's profile.
+| File                   | Description                  |
+| ---------------------- | ---------------------------- |
+| `Compass.Core.csproj`  | Project file                 |
+| `ServiceExtensions.cs` | Dependency injection helpers |
 
-### Entities
+#### 📂 AutoMapper
 
-- **AppUser.cs**: Entity class representing an application user.
-- **Category.cs**: Entity class representing a category.
-- **Course.cs**: Entity class representing a course.
-- **RefreshToken.cs**: Entity class representing a refresh token.
+* `AutoMapperCategoryAndProductProfile.cs`
+* `AutoMapperCourseProfile.cs`
+* `AutoMapperUserProfile.cs`
 
-### Specification
+#### 📂 DTOs
 
-- **CategorySpecification.cs**: Specification class for querying categories.
-- **CourseSpecification.cs**: Specification class for querying courses.
-- **RefreshTokenSpecification.cs**: Specification class for querying refresh tokens.
+Includes all data transfer objects like:
 
-### Interfaces
+* `RegisterUserDto.cs`
+* `CourseDto.cs`
+* `ResetPasswordDto.cs`
 
-- **ICategoryService.cs**: Interface for the category service.
-- **ICourseService.cs**: Interface for the course service.
-- **IEntity.cs**: Interface for entity classes.
-- **IJwtTokenService.cs**: Interface for the JWT token service.
-- **IRepository.cs**: Interface for the repository.
+#### 📂 Entities
 
-### Services
+* `AppUser.cs`
+* `Course.cs`
+* `Category.cs`
+* `RefreshToken.cs`
 
-- **CategoryService.cs**: Service class for managing categories.
-- **CourseService.cs**: Service class for managing courses.
-- **ServiceResponse.cs**: Generic response class for service methods.
+#### 📂 Specifications
 
-### Validation
+* Custom query logic for entities like:
 
-#### Category
+  * `CategorySpecification.cs`
+  * `CourseSpecification.cs`
 
-- **AddCategoryValidation.cs**: Validation rules for adding a category.
+#### 📂 Interfaces
 
-#### Course
+* Abstractions like:
 
-- **AddCourseValidation.cs**: Validation rules for adding a course.
+  * `ICourseService.cs`
+  * `IJwtTokenService.cs`
+  * `IRepository.cs`
 
-#### Token
+#### 📂 Services
 
-- **TokenRequestValidation.cs**: Validation rules for token requests.
+* Concrete implementations:
 
-#### User
+  * `CourseService.cs`
+  * `CategoryService.cs`
+  * `ServiceResponse.cs`
 
-- **ResetPasswordValidation.cs**: Validation rules for resetting a password.
-- **UpdateProfileValidation.cs**: Validation rules for updating a user's profile.
-- **UserRegistrationValidation.cs**: Validation rules for user registration.
+#### 📂 Validation
 
-### Compass.Infrastructure
+Organized by domain (Category, Course, Token, User). Example:
 
-- **Compass.Infrastructure.csproj**: Project file for the Compass Infrastructure library.
+* `UserRegistrationValidation.cs`
+* `AddCategoryValidation.cs`
 
-### Data
+### 📁 Compass.Infrastructure
 
-- **CompassDbContext.cs**: Database context class for the Compass application.
+| File                  | Description         |
+| --------------------- | ------------------- |
+| `CompassDbContext.cs` | Database context    |
+| `SeedData.cs`         | Initial data seeder |
 
-### Seed
+#### Interfaces & Services
 
--
+* `IEmailSender.cs`, `ISystemClock.cs`
+* `EmailSenderService.cs`, `SystemClockService.cs`
 
- **SeedData.cs**: Class for seeding initial data to the database.
+---
 
-### Interfaces
+## 🧩 Dashboard (React + TypeScript)
 
-- **IEmailSender.cs**: Interface for the email sender service.
-- **IJwtTokenGenerator.cs**: Interface for the JWT token generator service.
-- **ISystemClock.cs**: Interface for the system clock service.
+A dynamic admin interface for managing users, courses, and categories.
 
-### Services
+### 📂 Project Root
 
-- **EmailSenderService.cs**: Service class for sending emails.
-- **JwtTokenGeneratorService.cs**: Service class for generating JWT tokens.
-- **SystemClockService.cs**: Service class for accessing the system clock.
+| File            | Description               |
+| --------------- | ------------------------- |
+| `package.json`  | Metadata and dependencies |
+| `tsconfig.json` | TypeScript config         |
+| `README.md`     | Project overview          |
+| `.gitignore`    | Git ignored files         |
 
+### 📂 public
 
-## ========================================================================================================================== ##
-## ========================================================================================================================== ##
-## ========================================================================================================================== ##
+* `index.html`
+* `favicon.ico`
 
+### 📂 src
 
-Here's the documentation for the given file list in the dashboard:
+| File        | Description        |
+| ----------- | ------------------ |
+| `App.tsx`   | Main app component |
+| `index.tsx` | Entry point        |
 
-## Dashboard Documentation
+#### 📁 containers & layout
 
-This documentation provides an overview of the files and directories in the dashboard project.
+* `dashboardLayout/listItems`
 
-### File List
+#### 📁 hooks
 
-- **.gitignore**: Specifies which files and directories should be ignored by Git version control.
-- **package-lock.json**: Automatically generated file that describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
-- **package.json**: File that holds various metadata relevant to the project, including project dependencies.
-- **README.md**: Readme file providing information and instructions about the project.
-- **tsconfig.json**: TypeScript configuration file for the project.
+* `useActions.ts`
+* `useTypedSelector.ts`
 
-#### public
+#### 📁 pages
 
-- **favicon.ico**: Icon file displayed in the browser tab.
-- **index.html**: Entry HTML file that loads the dashboard application.
+Grouped by features like:
 
-#### src
+* `addCategory`, `addCourse`, `signIn`, `signUp`
+* `confirmEmail`, `resetPassword`, `updateCourse`
+* `profile`, `categories`, `courses`, `users`
 
-- **App.tsx**: Main TypeScript file for the dashboard application.
-- **index.tsx**: Entry point file for the dashboard application.
+Each contains:
 
-##### containers
+* `index.tsx` (page logic)
+* `validation.ts` (form validation)
 
-- **index.tsx**: Index file for containers in the dashboard application.
+#### 📁 services
 
-###### dashboardLayout
+* `api-category-service.ts`
+* `api-course-service.ts`
+* `api-user-service.ts`
 
-- **listItems**: Index file for the list items in the dashboard layout.
+#### 📁 store (Redux)
 
-##### hooks
+Contains action creators, reducers, and type definitions:
 
-- **useActions.ts**: Custom hook for accessing action creators in the dashboard application.
-- **useTypedSelector.ts**: Custom hook for accessing the Redux store state in the dashboard application.
+* `categoryActions`, `courseActions`, `userActions`
+* `categoryReducer`, `courseReducers`, `userReducers`
 
-##### pages
+---
 
-###### addCategory
+## 🌐 Frontend Client (Angular)
 
-- **index.tsx**: Page file for adding a category in the dashboard application.
-- **validation.ts**: Validation file for adding a category in the dashboard application.
+A user-facing client for interacting with the application.
 
-###### addCourse
+### 📂 Project Root
 
-- **index.tsx**: Page file for adding a course in the dashboard application.
-- **validation.ts**: Validation file for adding a course in the dashboard application.
+| File              | Description              |
+| ----------------- | ------------------------ |
+| `angular.json`    | Angular config           |
+| `tsconfig.*.json` | TypeScript configs       |
+| `.editorconfig`   | Coding conventions       |
+| `.vscode/`        | VS Code workspace config |
+| `README.md`       | Project documentation    |
 
-###### auth
+### 📁 src
 
-- **validation.ts**: Validation file for authentication in the dashboard application.
+| File          | Description            |
+| ------------- | ---------------------- |
+| `main.ts`     | Bootstraps Angular app |
+| `index.html`  | Entry HTML             |
+| `styles.scss` | Global styles          |
 
-###### signUp
+#### 📁 app
 
-- **index.tsx**: Page file for user sign-up in the dashboard application.
+Includes routing and main components:
 
-###### signIn
+* `app.module.ts`, `app.component.*`
+* Feature module: `courses/courses.component.*`
 
-- **index.tsx**: Page file for user sign-in in the dashboard application.
+#### 📁 services
 
-###### categories
+* `category.service.ts`
+* `course.service.ts`
 
-- **index.tsx**: Page file for categories in the dashboard application.
+#### 📁 assets
 
-###### confirmEmail
-
-- **index.tsx**: Page file for confirming email in the dashboard application.
-
-###### courses
-
-- **index.tsx**: Page file for courses in the dashboard application.
-
-###### defaultPage
-
-- **index.tsx**: Page file for the default page in the dashboard application.
-
-###### notFound
-
-- **index.tsx**: Page file for the not found page in the dashboard application.
-
-###### profile
-
-- **index.tsx**: Page file for the user profile in the dashboard application.
-- **validation.ts**: Validation file for the user profile in the dashboard application.
-
-###### resetPassword
-
-- **index.tsx**: Page file for resetting the password in the dashboard application.
-- **index2.tsx**: Another page file for resetting the password in the dashboard application.
-- **validation.ts**: Validation file for resetting the password in the dashboard application.
-
-###### updateCategory
-
-- **index.tsx**: Page file for updating a category in the dashboard application.
-- **validation.ts**: Validation file for updating a category in the dashboard application.
-
-###### updateCourse
-
-- **index.tsx**: Page file for updating a course in the dashboard application.
-- **validation.ts**: Validation file for updating a course in the dashboard application.
-
-###### users
-
-- **index.tsx**: Page file for users in the dashboard application.
-
-##### services
-
-- **api-category-service.ts**: Service file for category-related functionality in the dashboard application.
-- **api-course-service.ts**: Service file for course-related functionality in the dashboard application.
-- **api-user-service.ts**: Service file for user-related functionality in the dashboard application.
-
-##### store
-
-- **index.ts**: Index file for the Redux store in the
-
- dashboard application.
-
-###### action-creators
-
-- **index.ts**: Index file for action creators in the dashboard application.
-
-###### categoryActions
-
-- **index.ts**: Index file for category-related action creators in the dashboard application.
-
-###### courseActions
-
-- **index.ts**: Index file for course-related action creators in the dashboard application.
-
-###### userActions
-
-- **index.ts**: Index file for user-related action creators in the dashboard application.
-
-###### reducers
-
-- **index.ts**: Index file for reducers in the dashboard application.
-
-###### categoryReducer
-
-- **index.ts**: Reducer file for category-related functionality in the dashboard application.
-- **types.ts**: Type definitions for the category reducer in the dashboard application.
-
-###### courseReducers
-
-- **index.ts**: Reducer file for course-related functionality in the dashboard application.
-- **types.ts**: Type definitions for the course reducers in the dashboard application.
-
-###### userReducers
-
-- **index.ts**: Reducer file for user-related functionality in the dashboard application.
-- **types.ts**: Type definitions for the user reducers in the dashboard application.
-
-
-## ========================================================================================================================== ##
-## ========================================================================================================================== ##
-## ========================================================================================================================== ##
-
-Here's the documentation for the given file list in the front end:
-
-## Frontend Documentation
-
-This documentation provides an overview of the files and directories in the frontend project.
-
-### File List
-
-- **.editorconfig** - Configuration file for defining coding styles and preferences.
-- **.gitignore** - Specifies which files and directories should be ignored by Git version control.
-- **angular.json** - Configuration file for the Angular project.
-- **package-lock.json** - Automatically generated file that describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
-- **package.json** - File that holds various metadata relevant to the project, including project dependencies.
-- **README.md** - Readme file providing information and instructions about the project.
-- **tsconfig.app.json** - TypeScript configuration file for the Angular application.
-- **tsconfig.json** - TypeScript configuration file for the project.
-- **tsconfig.spec.json** - TypeScript configuration file for the project's unit tests.
-- **.vscode**
-  - **extensions.json** - JSON file used to recommend extensions for the Visual Studio Code workspace.
-  - **launch.json** - Configuration file for debugging in Visual Studio Code.
-  - **tasks.json** - Configuration file for tasks in Visual Studio Code.
-- **images**
-  - **No_image_available.svg.png** - Placeholder image for when no image is available.
-- **src**
-  - **favicon.ico** - Icon file displayed in the browser tab.
-  - **index.html** - Entry HTML file that loads the Angular application.
-  - **main.ts** - Main TypeScript file that bootstraps the Angular application.
-  - **styles.scss** - Global styles file for the application.
-  - **app**
-    - **app-routing.module.ts** - Angular routing module for configuring application routes.
-    - **app.component.html** - HTML template for the root component of the application.
-    - **app.component.scss** - Styling for the root component of the application.
-    - **app.component.ts** - TypeScript file for the root component of the application.
-    - **app.module.ts** - Angular module file that declares and configures the application's components, services, and other features.
-    - **courses**
-      - **courses.component.html** - HTML template for the courses component.
-      - **courses.component.scss** - Styling for the courses component.
-      - **courses.component.ts** - TypeScript file for the courses component.
-  - **assets**
-    - **.gitkeep** - Placeholder file to keep the directory structure in version control.
-- **services**
-  - **category.service.ts** - Angular service for handling category-related functionality.
-  - **course.service.ts** - Angular service for handling course-related functionality.
-
+* Placeholder image: `No_image_available.svg.png`
